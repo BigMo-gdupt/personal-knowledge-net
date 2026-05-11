@@ -73,7 +73,6 @@ personal-knowledge-net/
 ├── analyze_duplicates.py       # 重复内容检测脚本
 ├── analyze_format.py           # 格式合规检查脚本
 ├── analyze_links.py            # 双向链接死链检测脚本
-├── OPTIMIZATION_PLAN.md        # 项目优化方案（Token 精简等）
 ├── .gitignore                  # Git 忽略规则
 └── LICENSE                     # MIT 开源协议
 ```
