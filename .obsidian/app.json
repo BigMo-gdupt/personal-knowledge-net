@@ -1,0 +1,10 @@
+{
+  "userIgnoreFilters": [
+    "raw/",
+    "_staging_pdf/",
+    "DEEPSEEK",
+    "_ManuNote/",
+    "_templates/"
+  ],
+  "alwaysUpdateLinks": true
+}

@@ -1,0 +1,36 @@
+name: Weekly Quiz Reminder
+
+on:
+  schedule:
+    # 每周一北京时间 8:30 执行（UTC 0:30）
+    - cron: '30 0 * * 1'
+  workflow_dispatch:
+    # 支持手动触发测试
+
+jobs:
+  send-reminder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send reminder email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.qq.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "⏰ 提醒：请打开电脑和 Trae SOLO"
+          to: ${{ secrets.EMAIL_USERNAME }}
+          from: Weekly Quiz System
+          body: |
+            <h2>⏰ 周提问提醒</h2>
+            <p>今天是周一，知识库周提问系统已就绪。</p>
+            <p>请完成以下操作：</p>
+            <ol>
+              <li>打开电脑</li>
+              <li>启动 <strong>Trae SOLO</strong> 软件</li>
+              <li>SOLO 会自动生成本周学术思考题并发送到此邮箱</li>
+            </ol>
+            <p>如果你已经打开了 SOLO，请忽略此邮件。</p>
+            <hr>
+            <p style="color:gray; font-size:12px;">此邮件由 GitHub Actions 自动发送 · 个人知识库周提问系统</p>

@@ -1,0 +1,7 @@
+﻿_config/email_config.json
+__pycache__/
+*.pyc
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.DS_Store
+Thumbs.db

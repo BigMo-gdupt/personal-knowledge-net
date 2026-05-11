@@ -1,0 +1,34 @@
+/* 
+ * Obsidian 关系图谱自定义样式
+ * 将 _quiz_archive/ 目录下的题目节点显示为红色
+ */
+
+/* 方法1：基于文件路径的节点颜色 */
+.graph-view.color-fill[data-path*="_quiz_archive"] {
+    color: #e74c3c !important; /* 红色 */
+}
+
+/* 方法2：基于标签的节点颜色（推荐，更灵活） */
+.graph-view.color-fill.tag-quiz {
+    color: #e74c3c !important; /* 红色 */
+}
+
+/* 方法3：基于 frontmatter 中的 tags 包含 quiz 的文件 */
+.graph-view.color-fill[data-tags*="quiz"] {
+    color: #e74c3c !important; /* 红色 */
+}
+
+/* 可选：让红色节点在图谱中更突出 */
+.graph-view.color-fill[data-path*="_quiz_archive"],
+.graph-view.color-fill.tag-quiz,
+.graph-view.color-fill[data-tags*="quiz"] {
+    color: #e74c3c !important;
+    /* 增加节点大小 */
+    --graph-node-size: 8px;
+}
+
+/* 可选：红色节点的连接线也使用红色调 */
+.graph-view.color-line[data-path*="_quiz_archive"],
+.graph-view.color-line.tag-quiz {
+    color: rgba(231, 76, 60, 0.4) !important;
+}

@@ -1,0 +1,7 @@
+﻿{
+  "sender": "${EMAIL_SENDER_ADDRESS}",
+  "password": "${EMAIL_SMTP_AUTH_CODE}",
+  "receiver": "${EMAIL_RECEIVER_ADDRESS}",
+  "smtp_server": "smtp.qq.com",
+  "smtp_port": 465
+}

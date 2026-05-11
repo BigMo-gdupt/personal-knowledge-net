@@ -1,0 +1,28 @@
+[
+  {
+    "week_number": 20,
+    "sent_date": "2026-05-11",
+    "quiz_types": ["基础巩固×3", "适度挑战×3"],
+    "topics": [
+      "Patching与点级注意力问题",
+      "Channel-independence策略",
+      "序列分解技术",
+      "iTransformer维度倒置",
+      "TimesNet多周期建模",
+      "TimeXer外生变量处理"
+    ],
+    "related_nodes": [
+      "Patching（分块机制）",
+      "点级注意力问题",
+      "PatchTST模型",
+      "Channel-independence（通道独立）",
+      "iTransformer模型",
+      "序列分解",
+      "DLinear模型",
+      "Autoformer模型",
+      "TimesNet模型",
+      "TimeXer模型",
+      "外生变量处理"
+    ]
+  }
+]
